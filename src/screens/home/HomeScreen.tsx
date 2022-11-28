@@ -39,18 +39,23 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
 
   const MenuButton = () => (
     <RNBounceable>
-      <Icon name="menu" type="Ionicons" color={colors.iconBlack} size={30} />
+      <Image
+        source={{ uri: "@assets/images/menu.png" }}
+        style={styles.menuIcon}
+      />
     </RNBounceable>
   );
 
+  const BackButton = () => {
+    <RNBounceable>
+      <Icon name="back" type="Ionicons" color={colors.iconBlack} size={30} />
+    </RNBounceable>;
+  };
+
   const Header = () => (
     <View style={styles.header}>
+      <BackButton />
       <MenuButton />
-      <Image
-        resizeMode="cover"
-        source={{ uri: profileURI }}
-        style={styles.profilePicImageStyle}
-      />
     </View>
   );
 

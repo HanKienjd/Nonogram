@@ -12,3 +12,5 @@ export interface IDataCategory {
   countdownMinutes: number;
   levels: IDataLevel[];
 }
+
+

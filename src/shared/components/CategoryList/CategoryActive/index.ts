@@ -1,1 +1,0 @@
-export { CategoryActive } from "./CategoryActive";

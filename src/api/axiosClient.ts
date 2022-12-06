@@ -2,8 +2,9 @@ import axios from "axios";
 import queryString from "query-string";
 import Config from "react-native-config";
 
+console.log("Config", Config);
 const axiosClient = axios.create({
-  baseURL: Config.API_URL || "http://10.0.3.1:3000",
+  baseURL: Config.API_URL || "http://192.168.0.101:8089",
   paramsSerializer: (params) => queryString.stringify(params),
 });
 

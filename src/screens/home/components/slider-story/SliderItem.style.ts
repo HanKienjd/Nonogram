@@ -1,13 +1,14 @@
 import { ScreenWidth } from "@freakycoder/react-native-helpers";
 import { ExtendedTheme } from "@react-navigation/native";
-import { ViewStyle, StyleSheet, ImageStyle } from "react-native";
+import { ViewStyle, StyleSheet, ImageStyle, TextStyle } from "react-native";
 
 interface Style {
   container: ViewStyle;
   imageBackground: ImageStyle;
-  containerCaption: ViewStyle;
   btnStart: ViewStyle;
   textStart: ViewStyle;
+  imageFull: ImageStyle;
+  textCaption: TextStyle
 }
 
 export default (theme: ExtendedTheme) => {
@@ -25,16 +26,29 @@ export default (theme: ExtendedTheme) => {
       height: "60%",
       resizeMode: "cover",
     },
-    containerCaption: {},
+    imageFull: {
+      position: "absolute",
+      width: ScreenWidth,
+      height: "100%",
+      resizeMode: "cover",
+    },
+    textCaption: {
+      padding: 10,
+      color: colors.white,
+    },
     btnStart: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
+      marginLeft: "auto",
+      marginRight: "auto",
+      left: 0,
+      right: 0,
+      textAlign: "center",
+
     },
     textStart: {
       fontWeight: "bold",
       fontSize: 20,
       textAlign: "center",
+      color: colors.white,
     },
   });
 };

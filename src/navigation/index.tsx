@@ -11,9 +11,9 @@ import { DarkTheme, LightTheme } from "@theme/themes";
 // ? Screens
 import DetailScreen from "@screens/detail/DetailScreen";
 import HomeScreen from "@screens/home/HomeScreen";
-import LevelGrid from "@screens/home/list-level/LevelGrid";
-import StoryGame from "@screens/home/StoryGame";
-
+import LevelsScreen from "@screens/home/levels/LevelsScreen";
+import StoryGame from "@screens/home/Story/StoryGame";
+import EndGameScreen from "@screens/endgame/EndGameScreen";
 // ? If you want to use stack or tab or both
 const Stack = createStackNavigator();
 
@@ -35,7 +35,8 @@ const Navigation = () => {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name={SCREENS.HOME} component={HomeScreen} />
         <Stack.Screen name={SCREENS.STORY} component={StoryGame} />
-        <Stack.Screen name={SCREENS.LEVELS} component={LevelGrid} />
+        <Stack.Screen name={SCREENS.LEVELS} component={LevelsScreen} />
+        <Stack.Screen name={SCREENS.ENDGAME} component={EndGameScreen} />
         <Stack.Screen name={SCREENS.DETAIL}>
           {(props) => <DetailScreen {...props} />}
         </Stack.Screen>

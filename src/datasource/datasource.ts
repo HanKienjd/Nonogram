@@ -22,10 +22,14 @@ const parseCategory = (category: IDataCategory): ICategory => ({
   title: category.title,
 });
 
+<<<<<<< HEAD
 const parseLevelSummary = (
   category: IDataCategory,
   level: IDataLevel,
 ): ILevelSummary => ({
+=======
+const parseLevelSummary = (category: IDataCategory, level: IDataLevel): ILevelSummary => ({
+>>>>>>> 20e194c (Story Screen)
   id: level.id,
   timeResult: getLevelTime(category.title, level.title),
   title: level.title,

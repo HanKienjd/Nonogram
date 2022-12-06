@@ -110,7 +110,7 @@ module.exports = {
     "import/no-deprecated": 0,
     "@typescript-eslint/indent": 0,
     "react-hooks/rules-of-hooks": 2,
-
+    "plugin:react/jsx-runtime": "extends",
     "jest/no-identical-title": 2,
     "jest/valid-expect": 2,
     camelcase: 2,

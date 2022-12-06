@@ -11,6 +11,17 @@ interface Style {
   contentContainer: ViewStyle;
   listContainer: ViewStyle;
   profilePicImageStyle: ImageStyle;
+  image: ImageStyle;
+  title: TextStyle;
+  subtitle: TextStyle;
+  subtitleButtonStart: TextStyle;
+  buttonStart: ViewStyle;
+  textStory: TextStyle;
+  textStoryBelow: TextStyle;
+  containerStoryBelow: ViewStyle;
+  titlePage: ViewStyle;
+  textPage: TextStyle;
+  containerListLevel: ViewStyle;
 }
 
 export default (theme: ExtendedTheme) => {
@@ -18,7 +29,7 @@ export default (theme: ExtendedTheme) => {
   return StyleSheet.create<Style>({
     container: {
       flex: 1,
-      alignItems: "center",
+      width: "100%",
       backgroundColor: colors.background,
     },
     titleTextStyle: {
@@ -61,6 +72,84 @@ export default (theme: ExtendedTheme) => {
       height: 50,
       width: 50,
       borderRadius: 30,
+    },
+    image: {
+      flex: 1,
+      resizeMode: "cover",
+      justifyContent: "flex-start",
+      alignItems: "center",
+      paddingTop: "20%",
+    },
+    title: {
+      fontSize: 48,
+      fontWeight: "bold",
+      color: "white",
+      fontFamily: "Montserrat-Italic",
+      marginHorizontal: 10,
+    },
+    subtitle: {
+      fontSize: 20,
+      fontWeight: "bold",
+      color: "white",
+      opacity: 0.8,
+    },
+    subtitleButtonStart: {
+      fontSize: 20,
+      fontWeight: "bold",
+      color: "white",
+      zIndex: 99,
+    },
+    buttonStart: {
+      flex: 1,
+      justifyContent: "flex-end",
+      alignItems: "center",
+      paddingBottom: "40%",
+    },
+    textStory: {
+      fontSize: 16,
+      textAlign: "center",
+      width: "70%",
+      lineHeight: 30,
+      fontWeight: "500",
+    },
+    containerStoryBelow: {
+      flex: 1,
+      justifyContent: "flex-end",
+      alignItems: "center",
+      width: "70%",
+      lineHeight: 30,
+      paddingBottom: "40%",
+    },
+    textStoryBelow: {
+      fontSize: 16,
+      textAlign: "center",
+      lineHeight: 30,
+      fontWeight: "500",
+    },
+    //List Page
+    titlePage: {
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    textPage: {
+      fontSize: 32,
+      fontWeight: "bold",
+      lineHeight: 40,
+    },
+    containerListLevel: {
+      borderRadius: 14,
+      borderWidth: 1,
+      borderColor: colors.primary,
+      padding: 10,
+      shadowColor: colors.shadow,
+      shadowOffset: {
+        width: 0,
+        height: 3,
+      },
+      shadowOpacity: 0.27,
+      shadowRadius: 4.65,
+      elevation: 6,
     },
   });
 };

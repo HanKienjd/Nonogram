@@ -45,11 +45,13 @@ export default (theme: ExtendedTheme) => {
       fontWeight: "700",
     },
     header: {
-      width: ScreenWidth * 0.9,
+      width: ScreenWidth * 0.8,
+      flex: 1,
       flexDirection: "row",
-      alignItems: "center",
+      alignItems: "flex-start",
       justifyContent: "space-between",
-      marginTop: 10,
+      marginLeft: "auto",
+      marginRight: "auto",
     },
     contentContainer: {
       flex: 1,
